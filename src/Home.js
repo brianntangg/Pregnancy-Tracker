@@ -8,6 +8,7 @@ import { RiMentalHealthLine } from "react-icons/ri";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { IoScaleOutline } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
+import "./Home.css"
 
 function Home() {
   const navigate = useNavigate();
@@ -66,28 +67,32 @@ function Home() {
   };
 
   return (
-    <div>
-      <p>Welcome, {user.name}</p>
-      <p>
+    <div className="containter">
+      <p className="title">Welcome, {user.name}</p>
+      <p className="update">
         You are in week {user.week}. You have {40 - user.week} more weeks left
         to go! Stay strong!
       </p>
-      <div>
+      <div className="sectionsContainer">
+      <div className="sections">
         <p>Expected Symptoms</p>
-        <RiMentalHealthLine />
+        <RiMentalHealthLine className="image"/>
       </div>
-      <div>
+      <div className="sections">
         <p>Sleep and Diet Tips</p>
-        <IoFastFoodOutline />
+        <IoFastFoodOutline className="image"/>
       </div>
-      <div>
+      <div className="sections">
         <p>Weight Tracker</p>
-        <IoScaleOutline />
+        <IoScaleOutline className="image"/>
       </div>
+      </div>
+      <div className="logout"> 
       <button onClick={handleLogout}>Logout</button>
       <button onClick={handleSettings}>
         <FaUserCircle />
       </button>
+      </div>
     </div>
   );
 }
