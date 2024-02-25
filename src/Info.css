@@ -1,0 +1,50 @@
+.info-container {
+  padding: 40px;
+}
+
+.info-title {
+  color: #5b21b6;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.info-subtitle {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.info-form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 300px;
+  padding-right: 300px;
+  margin-top: 30px;
+}
+
+.info-input {
+  border: 1px solid #d1d5db;
+  border-radius: 100px;
+  font-size: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.info-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #8b5cf6;
+  color: white;
+  font-size: 22px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
+
+.info-label {
+  font-size: 20px;
+}

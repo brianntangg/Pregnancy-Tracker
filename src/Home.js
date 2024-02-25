@@ -8,7 +8,7 @@ import { RiMentalHealthLine } from "react-icons/ri";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { IoScaleOutline } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
-import "./Home.css"
+import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
@@ -74,24 +74,32 @@ function Home() {
         to go! Stay strong!
       </p>
       <div className="sectionsContainer">
-      <div className="sections">
-        <p>Expected Symptoms</p>
-        <RiMentalHealthLine className="image"/>
+        <a href="/symptoms" className="section-link">
+          <div className="sections">
+            <p className="section-name">Expected Symptoms</p>
+            <RiMentalHealthLine className="image" />
+          </div>
+        </a>
+        <a href="/symptoms" className="section-link">
+          <div className="sections">
+            <p className="section-name">Sleep and Diet Tips</p>
+            <IoFastFoodOutline className="image" />
+          </div>
+        </a>
+        <a href="/symptoms" className="section-link">
+          <div className="sections">
+            <p className="section-name">Weight Tracker</p>
+            <IoScaleOutline className="image" />
+          </div>
+        </a>
       </div>
-      <div className="sections">
-        <p>Sleep and Diet Tips</p>
-        <IoFastFoodOutline className="image"/>
-      </div>
-      <div className="sections">
-        <p>Weight Tracker</p>
-        <IoScaleOutline className="image"/>
-      </div>
-      </div>
-      <div className="logout"> 
-      <button onClick={handleLogout}>Logout</button>
-      <button onClick={handleSettings}>
-        <FaUserCircle />
-      </button>
+      <div className="logout">
+        <button onClick={handleLogout} className="logout-button">
+          Logout
+        </button>
+        <button onClick={handleSettings} className="user-button">
+          <FaUserCircle />
+        </button>
       </div>
     </div>
   );
